@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My Wiki</title>
+<style type="text/css">
+body,td,th {
+	font-family: "Century Gothic";
+	
+}
+</style>
+</head>
+
+<body>
+<p style=" text-align: right; margin-right:100px">{{edit|safe}}&nbsp; 
+&nbsp;{{username}}({{logout|safe}})</p>
+<table width="800" border="0" cellpadding="6">
+{% for page in pages %}
+  <tr>
+    <td>{{page.created}}</td>
+    <td>{{page.content}}</td>
+    <td><a href="..{{page.page_id}}?v={{loop.index0}}">view</a></td>
+    <td><a href="../_edit{{page.page_id}}?v={{loop.index0}}">edit</a></td>
+  </tr>
+
+{% endfor%}
+</table>
+  
+</body>
+</html>
+

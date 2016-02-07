@@ -1,0 +1,43 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sign Up</title>
+<style type="text/css">
+
+.label {
+  margin: 0px;
+  width: 110px;
+  padding: 0px;
+  float: left;
+}
+
+</style>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" >
+  <p>
+  <div class="label"> <label for="name">Name</label> </div>
+    <input type="text" name="username" id="name"   value="{{username}}" /> {{user_error}}
+  </p>
+  <p>
+    <div class="label"><label for="password">Password</label></div>
+    <input type="password" name="password" id="password" />  {{pass_error}}
+  </p>
+  <p>
+    <div class="label"><label for="Verify">verify password</label></div>
+    <input type="password" name="verify" id="verify" />  {{verify_error}}
+  </p>
+  <p>
+    <div class="label"><label for="Email">email (optional)</label></div>
+    <input type="text" name="email" id="Email"  value="{{email}}" />  {{email_error}}
+  </p>
+
+   <p>
+      
+    <input type="submit" name="button" id="button" value="Submit" />
+  </p>
+</form>
+</body>
+</html>
